@@ -121,7 +121,7 @@ int MATCH_SPACE(int measured_ticks, int desired_us)
 //   Gap width is recorded; Ready is cleared; New logging starts
 //
 #ifdef IR_TIMER_USE_ESP32
-void IRTimer()
+void IRAM_ATTR IRTimer()
 #else
 ISR(TIMER_INTR_NAME)
 #endif
